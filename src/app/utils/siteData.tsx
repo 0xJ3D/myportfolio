@@ -72,9 +72,9 @@ const contactInfo = {
     // phone: "+",
 };
 
-const serviceData = [
+const WhatIDoDetails = [
     {
-        title: "Custom Digital Experiences",
+        title: "Bespoke Digital Experiences",
         description:
             "Stunning websites that reflect your brand and captivate your audience.",
         imageUrl: "/Guy.svg",
@@ -93,7 +93,7 @@ const serviceData = [
         imageUrl: "/guy.svg",
     },
     {
-        title: "Tech Support & Cloud Integration",
+        title: "Hosting and Cloud support",
         description:
             "System optimization, troubleshooting, cloud integration. ensuring your digital infrastructure runs smoothly.",
         imageUrl: "/guy.svg",
@@ -104,7 +104,7 @@ export {
     navLinks,
     socialLinks,
     contactInfo,
-    serviceData,
+    WhatIDoDetails,
     quickLinks,
     features,
 };
