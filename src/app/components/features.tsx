@@ -55,7 +55,7 @@ export default function FeatureCarousel() {
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-[#008383] min-w-[250px] h-[260px] p-8 m-4 bg-background rounded-3xl shadow-lg flex flex-col justify-between hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
+                                className="bg-[#008383] min-w-[250px] h-[260px] p-8 m-4  rounded-3xl shadow-lg flex flex-col justify-between hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
                             >
                                 <div>
                                     <div className="text-4xl mb-4">

@@ -1,77 +1,128 @@
-// "use client";
-import { ArrowBigDownDash } from "lucide-react";
+"use client";
 import Image from "next/image";
 import React, { useRef } from "react";
 import * as motion from "motion/react-client";
+import Stack from "./stack";
 
 const Hero = () => {
     const constraintsRef = useRef(null);
+
     return (
-        <motion.div
+        <motion.main
             ref={constraintsRef}
-            initial={{ opacity: 0, y: 1000, scale: 0 }}
+            initial={{ opacity: 0, y: 100, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{
-                duration: 1,
-                scale: { type: "spring", visualDuration: 0.4, bounce: 0 },
-                delayChildren: 0.5,
+                duration: 0.8,
+                scale: { type: "spring", bounce: 0.4 },
+                delayChildren: 0.3,
             }}
-            className="borderx flex flex-col flex-wrap max-w-screen h-[100vh] items-center p-2 md:px-6 lg:px-10 text-[#303030]  justify-center "
+            className="flex flex-col w-full justify-center items-center px-3 md:px-5 rounded-b-lg  overflow-x-hidden"
         >
-            <div className="flex justify-between items-center w-full borderx">
-                <div className=" flex flex-col justify-center ">
-                    <h1 className="text-[6rem] font-boldx">
-                        {" "}
-                        HI, I&apos;m <span className="underline">Elnathan</span>
-                    </h1>
-                    <h2 className="text-3xl lg:text-4xl font-bold pb-4">
-                        Software Developer, Maintainer, & Support Specialist.{" "}
-                    </h2>
-                    <p className="text-[#303030] w-[650px] text-2xl">
-                        I build intuitive, responsive websites and web
-                        applications. <br />
-                        Let’s collaborate to drive results for your business
-                        turning Your Vision into Digital Reality
-                    </p>
-                </div>
-                <div className="bg-[#3030302d]x flex justify-center items-center p-1 rounded-full ">
-                    <div className="relative w-100 h-90 rounded-fullx overflow-hidden ">
+            <div className="border2 border-[#ffffff]s rounded-b-lg p-5 px-10  bg-[#141313]x bg-[#07090f] w-full  ">
+                {/* Content Container */}
+                <div className=" flex flex-col-reverse lg:flex-row justify-between items-center w-full gap-12 mb-16">
+                    {/* Text Content */}
+                    <div className="flex flex-col text-center lg:text-left">
+                        <motion.h1
+                            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-[#fcfcfc]"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            Hello{" "}
+                            <span className="-m-5 inline text-[#ff8360]">
+                                .
+                            </span>{" "}
+                            <br />
+                            <div className="flex  items-end relative">
+                                <span className=" border-b-5 border-[#ff8360] w-10 absolute -left-10"></span>
+                                <span className="text-[#ff8360] ">
+                                    I'm Elnathan
+                                </span>
+                            </div>
+                        </motion.h1>
+
+                        <motion.h2
+                            className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 text-[#fcfcfc]"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                        >
+                            Software Developer
+                        </motion.h2>
+                        <motion.h3 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-3 text-[#fcfcfc]">
+                            Support Specialist
+                        </motion.h3>
+
+                        <motion.p
+                            className="text-lg text-[#fcfcfc] max-w-2xl mb-8"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                        >
+                            I build intuitive, responsive websites and web
+                            applications. Let's collaborate to drive results for
+                            your business and turn your vision into digital
+                            reality.
+                        </motion.p>
+                    </div>
+
+                    {/* Image Container */}
+                    <motion.div
+                        className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gray-100 shadow-lg overflow-hidden"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 150,
+                            delay: 0.5,
+                        }}
+                    >
                         <Image
-                            src={"/guy2.svg"}
+                            src="/guy2.svg"
+                            alt="Elnathan - Software Developer"
                             fill
-                            objectFit="contain"
-                            alt="picture of me"
-                            objectPosition="25% 10%"
+                            priority
+                            sizes="(max-width: 768px) 288px, 320px"
+                            className="object-contain p-2"
                         />
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
-            <motion.div
-                ref={constraintsRef}
-                className="w-full borderx flex gap-5"
-            >
+
+                {/* Buttons */}
                 <motion.div
-                    drag
-                    dragSnapToOrigin
-                    dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-                    // dragConstraints={constraintsRef}
-                    dragElastic={0.8}
+                    className="flex flex-wrap justify-centerx gap-6 mb-16 bg-red-50x"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
                 >
-                    <div className="p-3 bg-[#303030] text-[#008383] text-xl font-bold">
-                        About me
-                    </div>
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-8 py-3 bg-[#ff8360] text-[white]x text-lg font-bold rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    >
+                        About Me
+                    </motion.button>
+
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-8 py-3 bg-[white]x text-[#ff8360] text-lg font-bold rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 border-[#ff8360]"
+                    >
+                        Contact Me
+                    </motion.button>
                 </motion.div>
-                <button className="p-3 bg-[#008383] text-[#303030] border-2 text-xl font-bold">
-                    Contact Me
-                </button>
-            </motion.div>
+            </div>
+            {/* Stack Component */}
             <motion.div
-                drag
-                className="animate-bounce mt-3 w-full  flex flex-col items-center text-2xl justify-center"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
             >
-                scroll <ArrowBigDownDash />
+                {/* <Stack baseVelocity={4} /> */}
             </motion.div>
-        </motion.div>
+        </motion.main>
     );
 };
 

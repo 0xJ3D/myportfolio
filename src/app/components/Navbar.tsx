@@ -9,15 +9,15 @@ const Navbar = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#008383] pt-2 px-6 flex items-center justify-between"
+            className="bg-[red]x bg-[#07090f] mt-2 px-10 mx-5  flex items-center justify-between rounded-t-lg"
         >
             <div className="font-bold text-xl italic text-black">
                 <Link
                     href={"/"}
-                    className="text-[#303030]"
+                    className="text-[#ff8360]"
                 >{`elnathan.</>`}</Link>
             </div>
-            <div className="bg-[#303030] rounded-full px-6 py-5 flex items-center justify-center space-x-6">
+            <div className="bg-[#ff8360]  rounded-b-3xl px-6 py-5 flex items-center justify-center space-x-6">
                 {navLinks.map((navLink) => (
                     <NavItem
                         key={navLink.label}
@@ -43,9 +43,7 @@ const NavItem = ({ label, icon, path, isActive = false }: NavItemProps) => {
         <Link
             href={path}
             className={`uppercase text-sm font-medium flex items-center space-x-2 ${
-                isActive
-                    ? "text-white"
-                    : "text-gray-300 hover:text-[#008383] hover:font-bold"
+                isActive ? "text-white" : "text-[#000] hover:text-[#008383] "
             } transition-colors duration-200`}
         >
             <span>{label}</span>
