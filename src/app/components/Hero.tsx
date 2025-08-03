@@ -37,7 +37,7 @@ const Hero = () => {
                             <div className="flex  items-end relative">
                                 <span className=" border-b-5 border-[#ff8360] w-10 absolute -left-10"></span>
                                 <span className="text-[#ff8360] ">
-                                    I'm Elnathan
+                                    I&apos;m Elnathan
                                 </span>
                             </div>
                         </motion.h1>
@@ -61,9 +61,9 @@ const Hero = () => {
                             transition={{ delay: 0.4 }}
                         >
                             I build intuitive, responsive websites and web
-                            applications. Let's collaborate to drive results for
-                            your business and turn your vision into digital
-                            reality.
+                            applications. Let&apos;s collaborate to drive
+                            results for your business and turn your vision into
+                            digital reality.
                         </motion.p>
                     </div>
 
