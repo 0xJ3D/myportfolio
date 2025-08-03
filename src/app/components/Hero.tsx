@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import * as motion from "motion/react-client";
-import Stack from "./stack";
 
 const Hero = () => {
     const constraintsRef = useRef(null);
