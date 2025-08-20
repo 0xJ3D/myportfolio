@@ -1,4 +1,5 @@
 import { FileText, User, Mail, CodeXml, Camera } from "lucide-react";
+import { Monitor, Lightbulb, Palette } from "lucide-react";
 
 const navLinks = [
     { label: "Work", path: "/work", icon: <CodeXml size={16} /> },
@@ -38,35 +39,6 @@ const quickLinks = [
     { label: "Projects", url: "#" },
 ];
 
-const features = [
-    {
-        title: "Minimal Design",
-        description: "Clean aesthetics that put your content in the spotlight.",
-        icon: "✨",
-    },
-    {
-        title: "Responsive",
-        description:
-            "Flawless experiences across all devices and screen sizes.",
-        icon: "📱",
-    },
-    {
-        title: "Fast Performance",
-        description: "Lightning-quick load times for smooth user interactions.",
-        icon: "⚡",
-    },
-    {
-        title: "Accessibility",
-        description: "Inclusive design practices for all users.",
-        icon: "🌈",
-    },
-    {
-        title: "SEO Optimized",
-        description: "Built to help your site rank higher in search results.",
-        icon: "🔍",
-    },
-];
-
 const contactInfo = {
     email: "ejdunia@gmail.com",
     // phone: "+",
@@ -77,34 +49,21 @@ const WhatIDoDetails = [
         title: "Bespoke Digital Experiences",
         description:
             "Stunning websites that reflect your brand and captivate your audience.",
-        imageUrl: "/Guy.svg",
+        icon: Palette,
     },
     {
-        title: "SEO & Performance Optimization",
+        title: "AI Automation and Integration",
         description:
             "Bring your site to the top of search results and keep users engaged with fast load times.",
-        imageUrl: "/guy.svg",
+        icon: Monitor,
     },
 
-    {
-        title: "WordPress Development",
-        description:
-            "Custom theme development, plugin integration, I bring WordPress to life with solutions that are secure, fast, and easy to manage.",
-        imageUrl: "/guy.svg",
-    },
     {
         title: "Hosting and Cloud support",
         description:
             "System optimization, troubleshooting, cloud integration. ensuring your digital infrastructure runs smoothly.",
-        imageUrl: "/guy.svg",
+        icon: Lightbulb,
     },
 ];
 
-export {
-    navLinks,
-    socialLinks,
-    contactInfo,
-    WhatIDoDetails,
-    quickLinks,
-    features,
-};
+export { navLinks, socialLinks, contactInfo, WhatIDoDetails, quickLinks };

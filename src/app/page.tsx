@@ -9,8 +9,6 @@ export default function Home() {
         <main className="flex flex-col">
             <Hero />
             <Stack baseVelocity={4} />
-            {/* <WhatIDo /> */}
-            {/* <FeatureCarousel /> */}
             <ServicesSection />
         </main>
     );

@@ -43,7 +43,9 @@ const NavItem = ({ label, icon, path, isActive = false }: NavItemProps) => {
         <Link
             href={path}
             className={`uppercase text-sm font-medium flex items-center space-x-2 ${
-                isActive ? "text-white" : "text-[#000] hover:text-[#008383] "
+                isActive
+                    ? "text-white"
+                    : "text-[#000] hover:text-[#ff8360]x hover:font-[600]"
             } transition-colors duration-200`}
         >
             <span>{label}</span>

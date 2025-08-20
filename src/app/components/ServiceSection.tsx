@@ -1,35 +1,8 @@
 "use client";
-
 import { motion } from "framer-motion";
-import {
-    ChevronDown,
-    Monitor,
-    Lightbulb,
-    Palette,
-    ArrowRight,
-} from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import HireMeButton from "./HireMeButton";
-
-const services = [
-    {
-        id: 1,
-        title: "UI-UX CREATIVE DESIGN",
-        icon: Palette,
-        dark: true,
-    },
-    {
-        id: 2,
-        title: "VISUAL GRAPHIC DESIGN",
-        icon: Monitor,
-        dark: false,
-    },
-    {
-        id: 3,
-        title: "STRATEGY & DIGITAL MARKETING",
-        icon: Lightbulb,
-        dark: false,
-    },
-];
+import { WhatIDoDetails } from "../utils/siteData";
 
 // Animation variants
 const containerVariants = {
@@ -176,26 +149,18 @@ export default function ServicesSection() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                 >
-                    {services.map((service, index) => {
-                        const Icon = service.icon;
+                    {WhatIDoDetails.map((wid, index) => {
+                        const Icon = wid.icon;
                         return (
                             <motion.div
-                                key={service.id}
-                                className={`
-                  relative h-80 rounded-lg  cursor-pointer
-                  ${
-                      service.dark
-                          ? "bg-[#07090f] text-white "
-                          : "bg-[#07090f] text-[#ff8360] border-[#ff8360]"
-                  }
-                `}
+                                key={wid.title}
+                                className="
+                  relative h-80 rounded-lg  cursor-pointer bg-[#07090f] text-[#ff8360] border-[#ff8360]
+                "
                                 variants={cardVariants}
                                 whileHover={{
                                     y: -8,
                                     scale: 1.02,
-                                    boxShadow: service.dark
-                                        ? "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)"
-                                        : "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                                     transition: {
                                         type: "spring",
                                         stiffness: 300,
@@ -208,22 +173,26 @@ export default function ServicesSection() {
                                     {/* Icon */}
                                     <motion.div
                                         className="mb-8"
-                                        initial={{ scale: 0, rotate: -180 }}
-                                        whileInView={{ scale: 1, rotate: 0 }}
+                                        initial={{
+                                            scale: 0,
+                                            x: -20,
+                                            rotate: 10,
+                                        }}
+                                        whileInView={{
+                                            scale: 1,
+                                            rotate: 0,
+                                            x: 0,
+                                        }}
                                         transition={{
-                                            delay: 0.3 + index * 0.1,
+                                            delay: 0.1 + index * 0.1,
                                             duration: 0.6,
-                                            type: "spring",
+                                            type: "zoom",
                                             stiffness: 200,
                                         }}
-                                        viewport={{ once: true }}
+                                        // viewport={{ once: true }}
                                     >
                                         <Icon
-                                            className={`w-12 h-12 ${
-                                                service.dark
-                                                    ? "text-white"
-                                                    : "text-[#ff8360]"
-                                            }`}
+                                            className={`w-12 h-12 ${"text-[#ff8360]"}`}
                                         />
                                     </motion.div>
 
@@ -236,10 +205,10 @@ export default function ServicesSection() {
                                             delay: 0.4 + index * 0.1,
                                             duration: 0.6,
                                         }}
-                                        viewport={{ once: true }}
+                                        // viewport={{ once: true }}
                                     >
                                         <h3 className="text-xl font-bold leading-tight mb-4">
-                                            {service.title}
+                                            {wid.title}
                                         </h3>
                                     </motion.div>
 
@@ -247,7 +216,7 @@ export default function ServicesSection() {
                                     <motion.button
                                         className={`
                       flex items-center gap-2 text-sm font-medium group
-                      ${service.dark ? "text-white" : "text-[#ff8360]"}
+                      ${"text-[#ff8360]"}
                     `}
                                         initial={{ opacity: 0, x: -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
