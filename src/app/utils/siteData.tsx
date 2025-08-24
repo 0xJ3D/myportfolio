@@ -1,5 +1,5 @@
 import { FileText, User, Mail, CodeXml, Camera } from "lucide-react";
-import { Monitor, Lightbulb, Palette } from "lucide-react";
+import { MonitorSmartphone, BrainCircuit, Cloud } from "lucide-react";
 
 const navLinks = [
     { label: "Work", path: "/work", icon: <CodeXml size={16} /> },
@@ -49,20 +49,23 @@ const WhatIDoDetails = [
         title: "Bespoke Digital Experiences",
         description:
             "Stunning websites that reflect your brand and captivate your audience.",
-        icon: Palette,
+        icon: MonitorSmartphone,
+        bg: "/icons/monitor.svg",
     },
     {
         title: "AI Automation and Integration",
         description:
             "Bring your site to the top of search results and keep users engaged with fast load times.",
-        icon: Monitor,
+        icon: BrainCircuit,
+        bg: "/icons/brain.svg",
     },
 
     {
         title: "Hosting and Cloud support",
         description:
             "System optimization, troubleshooting, cloud integration. ensuring your digital infrastructure runs smoothly.",
-        icon: Lightbulb,
+        icon: Cloud,
+        bg: "/icons/cloud.svg",
     },
 ];
 
