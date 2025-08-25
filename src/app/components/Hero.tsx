@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import * as motion from "motion/react-client";
+import LottieAnimation from "./LottieAnimation";
 
 const Hero = () => {
     const constraintsRef = useRef(null);
@@ -68,25 +69,15 @@ const Hero = () => {
                     </div>
 
                     {/* Image Container */}
-                    <motion.div
-                        className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gray-100 shadow-lg overflow-hidden"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            type: "spring",
-                            stiffness: 150,
-                            delay: 0.5,
+                    <LottieAnimation
+                        src="/lottie/software.json"
+                        style={{
+                            height: "400px",
+                            width: "500px",
+                            border: "1px solid red",
+                            // background: "red",
                         }}
-                    >
-                        <Image
-                            src="/guy2.svg"
-                            alt="Elnathan - Software Developer"
-                            fill
-                            priority
-                            sizes="(max-width: 768px) 288px, 320px"
-                            className="object-contain p-2"
-                        />
-                    </motion.div>
+                    />
                 </div>
 
                 {/* Buttons */}

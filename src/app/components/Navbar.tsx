@@ -9,7 +9,7 @@ const Navbar = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-[red]x bg-[#07090f] mt-2 px-10 mx-5  flex items-center justify-between rounded-t-lg"
+            className=" bg-[#07090f] mt-2 px-10 mx-5  flex items-center justify-between rounded-t-lg"
         >
             <div className="font-bold text-xl italic text-black">
                 <Link
