@@ -10,7 +10,6 @@ import {
     useAnimationFrame,
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
-import techStack from "../utils/techStack";
 
 interface ParallaxProps {
     children: string;

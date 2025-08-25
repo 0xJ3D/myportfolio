@@ -1,35 +1,9 @@
 "use client";
-
 import { motion } from "framer-motion";
-import {
-    ChevronDown,
-    Monitor,
-    Lightbulb,
-    Palette,
-    ArrowRight,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import HireMeButton from "./HireMeButton";
-
-const services = [
-    {
-        id: 1,
-        title: "UI-UX CREATIVE DESIGN",
-        icon: Palette,
-        dark: true,
-    },
-    {
-        id: 2,
-        title: "VISUAL GRAPHIC DESIGN",
-        icon: Monitor,
-        dark: false,
-    },
-    {
-        id: 3,
-        title: "STRATEGY & DIGITAL MARKETING",
-        icon: Lightbulb,
-        dark: false,
-    },
-];
+import { WhatIDoDetails } from "../utils/siteData";
+import { ServiceCard } from "./serviceCard";
 
 // Animation variants
 const containerVariants = {
@@ -37,25 +11,8 @@ const containerVariants = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.2,
+            staggerChildren: 0.3,
             delayChildren: 0.1,
-        },
-    },
-};
-
-const cardVariants = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {
-            type: "spring",
-            stiffness: 100,
-            damping: 12,
-            duration: 0.7,
         },
     },
 };
@@ -176,102 +133,9 @@ export default function ServicesSection() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                 >
-                    {services.map((service, index) => {
-                        const Icon = service.icon;
+                    {WhatIDoDetails.map((wid, index) => {
                         return (
-                            <motion.div
-                                key={service.id}
-                                className={`
-                  relative h-80 rounded-lg  cursor-pointer
-                  ${
-                      service.dark
-                          ? "bg-[#07090f] text-white "
-                          : "bg-[#07090f] text-[#ff8360] border-[#ff8360]"
-                  }
-                `}
-                                variants={cardVariants}
-                                whileHover={{
-                                    y: -8,
-                                    scale: 1.02,
-                                    boxShadow: service.dark
-                                        ? "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)"
-                                        : "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                                    transition: {
-                                        type: "spring",
-                                        stiffness: 300,
-                                        damping: 20,
-                                    },
-                                }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                <div className="p-8 h-full flex flex-col justify-between">
-                                    {/* Icon */}
-                                    <motion.div
-                                        className="mb-8"
-                                        initial={{ scale: 0, rotate: -180 }}
-                                        whileInView={{ scale: 1, rotate: 0 }}
-                                        transition={{
-                                            delay: 0.3 + index * 0.1,
-                                            duration: 0.6,
-                                            type: "spring",
-                                            stiffness: 200,
-                                        }}
-                                        viewport={{ once: true }}
-                                    >
-                                        <Icon
-                                            className={`w-12 h-12 ${
-                                                service.dark
-                                                    ? "text-white"
-                                                    : "text-[#ff8360]"
-                                            }`}
-                                        />
-                                    </motion.div>
-
-                                    {/* Title */}
-                                    <motion.div
-                                        className="flex-1"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{
-                                            delay: 0.4 + index * 0.1,
-                                            duration: 0.6,
-                                        }}
-                                        viewport={{ once: true }}
-                                    >
-                                        <h3 className="text-xl font-bold leading-tight mb-4">
-                                            {service.title}
-                                        </h3>
-                                    </motion.div>
-
-                                    {/* Read More Button */}
-                                    <motion.button
-                                        className={`
-                      flex items-center gap-2 text-sm font-medium group
-                      ${service.dark ? "text-white" : "text-[#ff8360]"}
-                    `}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{
-                                            delay: 0.5 + index * 0.1,
-                                            duration: 0.6,
-                                        }}
-                                        viewport={{ once: true }}
-                                        whileHover={{ x: 5 }}
-                                    >
-                                        READ MORE
-                                        <motion.div
-                                            whileHover={{ x: 3 }}
-                                            transition={{
-                                                type: "spring",
-                                                stiffness: 400,
-                                                damping: 10,
-                                            }}
-                                        >
-                                            <ArrowRight className="w-4 h-4" />
-                                        </motion.div>
-                                    </motion.button>
-                                </div>
-                            </motion.div>
+                            <ServiceCard key={index} wid={wid} index={index} />
                         );
                     })}
                 </motion.div>

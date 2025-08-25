@@ -9,7 +9,7 @@ const Navbar = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-[red]x bg-[#07090f] mt-2 px-10 mx-5  flex items-center justify-between rounded-t-lg"
+            className=" bg-[#07090f] mt-2 px-10 mx-5  flex items-center justify-between rounded-t-lg"
         >
             <div className="font-bold text-xl italic text-black">
                 <Link
@@ -43,7 +43,9 @@ const NavItem = ({ label, icon, path, isActive = false }: NavItemProps) => {
         <Link
             href={path}
             className={`uppercase text-sm font-medium flex items-center space-x-2 ${
-                isActive ? "text-white" : "text-[#000] hover:text-[#008383] "
+                isActive
+                    ? "text-white"
+                    : "text-[#000] hover:text-[#ff8360]x hover:font-[600]"
             } transition-colors duration-200`}
         >
             <span>{label}</span>
