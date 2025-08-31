@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useRef } from "react";
 import * as motion from "motion/react-client";
 import LottieAnimation from "./LottieAnimation";
@@ -74,8 +73,6 @@ const Hero = () => {
                         style={{
                             height: "400px",
                             width: "500px",
-                            border: "1px solid red",
-                            // background: "red",
                         }}
                     />
                 </div>

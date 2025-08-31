@@ -6,7 +6,7 @@ const navLinks = [
     { label: "About", path: "/about", icon: <User size={16} /> },
     { label: "Projects", path: "/projects", icon: <FileText size={16} /> },
     { label: "Contact", path: "/contact", icon: <Mail size={16} /> },
-    { label: "Photos", path: "/contact", icon: <Camera size={16} /> },
+    { label: "Photos", path: "/photos", icon: <Camera size={16} /> },
 ];
 
 const socialLinks = [

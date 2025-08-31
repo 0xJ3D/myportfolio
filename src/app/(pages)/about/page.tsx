@@ -1,5 +1,6 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import { socialLinks } from "@/app/utils/siteData";
 
 export default function Home() {
     return (
@@ -9,7 +10,7 @@ export default function Home() {
                 {/* Logo */}
                 <div className="mb-8">
                     <div className="text-red-500 text-xl font-bold">
-                        {"<JM/>"}
+                        {"<ED/>"}
                     </div>
                 </div>
 
@@ -22,32 +23,32 @@ export default function Home() {
 
                 <div className="mb-8">
                     <div className="transform -rotate-90 whitespace-nowrap text-sm font-medium text-gray-600 tracking-wider">
-                        WRITER & DEVELOPER ENTHUSIAST
+                        FULLSTACK DEVELOPER
                     </div>
                 </div>
 
                 {/* Social Icons */}
                 <div className="flex flex-col gap-4">
                     <a
-                        href="https://github.com"
+                        href="https://github.com/ejdunia"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
                         <Github size={20} />
                     </a>
                     <a
-                        href="https://twitter.com"
+                        href="https://twitter.com/ejdunia"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
                         <Twitter size={20} />
                     </a>
                     <a
-                        href="https://linkedin.com"
+                        href="https://linkedin.com/in/ejdunia"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
                         <Linkedin size={20} />
                     </a>
                     <a
-                        href="mailto:hello@josemukorivo.com"
+                        href="mailto:ejdunia@gmail.com"
                         className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
                         <Mail size={20} />
@@ -64,7 +65,7 @@ export default function Home() {
                         <p className="text-sm text-gray-600 tracking-wider">
                             MAIL ME:{" "}
                             <span className="underline">
-                                HELLO@JOSEMUKORIVO.COM
+                                EJDUNIA@GMAIL.COM
                             </span>
                         </p>
                     </div>
@@ -76,28 +77,24 @@ export default function Home() {
                             <span className="inline-block animate-bounce">
                                 👋
                             </span>
-                            ,JOSEPH.
+                            , I'M ELNATHAN.
                         </h1>
                         <h2 className="text-5xl font-bold text-gray-900 leading-tight">
-                            WRITER, SOFTWARE
+                            A FULLSTACK
                         </h2>
                         <h2 className="text-5xl font-bold text-gray-900 leading-tight">
-                            ENGINEER, DEVOPS
-                        </h2>
-                        <h2 className="text-5xl font-bold text-gray-900 leading-tight">
-                            ENTHUSIAST.
+                            SOFTWARE ENGINEER
                         </h2>
                     </div>
 
                     {/* Description */}
                     <div className="max-w-lg">
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            Hello there! a pleasure to meet you. This space is
-                            where I immerse myself in the latest advancements in
-                            technology. find a mix of enlightening pieces on
-                            Software Development and thorough examinations of
-                            Cloud Native Technologies. genuinely excited to have
-                            you join me on this adventure. 🚀
+                            Hello there! It's a pleasure to meet you. This space is
+                            where I share my journey and insights in the world of
+                            technology. Here, you'll find a collection of my projects,
+                            thoughts on software development, and explorations into
+                            new technologies. I'm excited to have you here! 🚀
                         </p>
                     </div>
                 </div>
@@ -106,8 +103,8 @@ export default function Home() {
                 <div className="w-1/2 relative bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                     <div className="relative">
                         <Image
-                            src=""
-                            alt="Joseph Mukorivo - Professional headshot"
+                            src="/me.jpg"
+                            alt="Elnathan John - Professional headshot"
                             width={400}
                             height={600}
                             className="object-cover rounded-lg shadow-2xl"
