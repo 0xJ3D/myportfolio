@@ -89,9 +89,7 @@ export default function ServicesSection() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.2, duration: 0.6 }}
                                 viewport={{ once: true }}
-                            >
-                                — MY SERVICES ?
-                            </motion.p>
+                            ></motion.p>
                             <motion.h1
                                 className="text-5xl md:text-6xl font-bold text-[#07090f] leading-tight"
                                 initial={{ opacity: 0, y: 30 }}
@@ -119,8 +117,6 @@ export default function ServicesSection() {
                             </motion.p>
                         </motion.div>
                     </div>
-
-                    {/* All Service Button */}
 
                     <HireMeButton />
                 </div>
