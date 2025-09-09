@@ -17,7 +17,7 @@ const Navbar = () => {
                     className="text-[#ff8360]"
                 >{`elnathan.</>`}</Link>
             </div>
-            <div className="bg-[#ff8360]  rounded-b-3xl px-6 py-5 flex items-center justify-center space-x-6">
+            <div className="bg-[#ff8360]x  rounded-b-3xl px-6 py-5 flex items-center justify-center space-x-6">
                 {navLinks.map((navLink) => (
                     <NavItem
                         key={navLink.label}
@@ -27,7 +27,7 @@ const Navbar = () => {
                     />
                 ))}
             </div>
-            <div className="flex items-center space-x-4 bg-amber-500 rounded-full px-6 py-3"></div>
+            <div className="flex items-center space-x-4 bg-amber-500x rounded-full px-6 py-3"></div>
         </motion.nav>
     );
 };
@@ -43,9 +43,7 @@ const NavItem = ({ label, icon, path, isActive = false }: NavItemProps) => {
         <Link
             href={path}
             className={`uppercase text-sm font-medium flex items-center space-x-2 ${
-                isActive
-                    ? "text-white"
-                    : "text-[#000] hover:text-[#ff8360]x hover:font-[600]"
+                isActive ? "text-white" : "text-[#ff8360] hover:font-[600]"
             } transition-colors duration-200`}
         >
             <span>{label}</span>

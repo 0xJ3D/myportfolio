@@ -4,7 +4,7 @@ import LottieAnimation from "./LottieAnimation";
 
 // Custom hook to detect when element is in viewport
 const useInView = (options = {}) => {
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement>(null);
     const [inView, setInView] = useState(false);
 
     useEffect(() => {
@@ -12,22 +12,24 @@ const useInView = (options = {}) => {
             setInView(entry.isIntersecting);
         }, options);
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current;
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, [options]);
 
-    return [ref, inView];
+    return { ref, inView };
 };
 
 const LetsTalk = () => {
-    const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
+    const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
 
     return (
         <div
