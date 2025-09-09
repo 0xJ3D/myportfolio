@@ -1,6 +1,5 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
-import { socialLinks } from "@/app/utils/siteData";
 
 export default function Home() {
     return (
@@ -64,9 +63,7 @@ export default function Home() {
                     <div className="mb-12">
                         <p className="text-sm text-gray-600 tracking-wider">
                             MAIL ME:{" "}
-                            <span className="underline">
-                                EJDUNIA@GMAIL.COM
-                            </span>
+                            <span className="underline">EJDUNIA@GMAIL.COM</span>
                         </p>
                     </div>
 
@@ -77,7 +74,7 @@ export default function Home() {
                             <span className="inline-block animate-bounce">
                                 👋
                             </span>
-                            , I'M ELNATHAN.
+                            , I&apos;M ELNATHAN.
                         </h1>
                         <h2 className="text-5xl font-bold text-gray-900 leading-tight">
                             A FULLSTACK
@@ -90,11 +87,12 @@ export default function Home() {
                     {/* Description */}
                     <div className="max-w-lg">
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            Hello there! It's a pleasure to meet you. This space is
-                            where I share my journey and insights in the world of
-                            technology. Here, you'll find a collection of my projects,
-                            thoughts on software development, and explorations into
-                            new technologies. I'm excited to have you here! 🚀
+                            Hello there! It&apos;s a pleasure to meet you. This
+                            space is where I share my journey and insights in
+                            the world of technology. Here, you&apos;ll find a
+                            collection of my projects, thoughts on software
+                            development, and explorations into new technologies.
+                            I&apos;m excited to have you here! 🚀
                         </p>
                     </div>
                 </div>

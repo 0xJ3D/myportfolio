@@ -4,7 +4,7 @@ import { quickLinks } from "../utils/siteData";
 
 const Footer = () => {
     return (
-        <footer className="border-t border-border py-12 mt-20 p-2 md:px-6 lg:px-10">
+        <footer className=" py-12 mt-20 p-2 md:px-6 lg:px-10">
             <div className="container-custom">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div>
@@ -13,9 +13,6 @@ const Footer = () => {
                             className="font-playfair text-3xl font-bold tracking-tight"
                         >
                             Elnathan
-                            <span className="text-muted-foreground ml-2">
-                                Dunia
-                            </span>
                         </Link>
                         <p className="mt-4 text-muted-foreground">
                             Full Stack Developer specializing in creating
