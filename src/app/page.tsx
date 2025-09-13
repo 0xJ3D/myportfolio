@@ -8,12 +8,11 @@ import LetsTalk from "./components/LetsTalk";
 
 export default function Home() {
     return (
-        <main className="flex flex-col">
+        < >
             <Hero />
             <Stack baseVelocity={4} />
             <ServicesSection />
             <LetsTalk />
             <BrandShowcase />
-        </main>
+        </>
     );
-}

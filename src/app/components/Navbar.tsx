@@ -27,7 +27,7 @@ const Navbar = () => {
                     />
                 ))}
             </div>
-            <div className="flex items-center space-x-4 bg-amber-500x rounded-full px-6 py-3"></div>
+            <div className="flex items-center space-x-4  rounded-full px-6 py-3"></div>
         </motion.nav>
     );
 };
@@ -43,7 +43,9 @@ const NavItem = ({ label, icon, path, isActive = false }: NavItemProps) => {
         <Link
             href={path}
             className={`uppercase text-sm font-medium flex items-center space-x-2 ${
-                isActive ? "text-white" : "text-[#ff8360] hover:font-[600]"
+                isActive
+                    ? "text-white"
+                    : "text-[#ff8360] hover:text-[# hover:font-[600]"
             } transition-colors duration-200`}
         >
             <span>{label}</span>
