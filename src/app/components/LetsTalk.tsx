@@ -4,7 +4,7 @@ import LottieAnimation from "./LottieAnimation";
 
 // Custom hook to detect when element is in viewport
 const useInView = (options = {}) => {
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement>(null);
     const [inView, setInView] = useState(false);
 
     useEffect(() => {
@@ -12,22 +12,24 @@ const useInView = (options = {}) => {
             setInView(entry.isIntersecting);
         }, options);
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current;
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, [options]);
 
-    return [ref, inView];
+    return { ref, inView };
 };
 
 const LetsTalk = () => {
-    const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
+    const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
 
     return (
         <div
@@ -46,7 +48,7 @@ const LetsTalk = () => {
 
                 <div className="flex items-center mb-8">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#07090f] mr-4">
-                        Let&apos;s collab
+                        Let&apos;s create together!
                     </h1>
 
                     <motion.div
@@ -85,15 +87,14 @@ const LetsTalk = () => {
                 <motion.button
                     initial={{ opacity: 0 }}
                     animate={inView ? { opacity: 1 } : {}}
-                    transition={{ delay: 0.8 }}
+                    // transition={{ delay: 0.8 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 bg-[#07090f] text-white rounded-full font-medium text-lg mt-6"
+                    className="px-8 py-3 bg-[#07090f] text-white rounded-full font-medium text-lg mt-6 "
                 >
                     Get in touch
                 </motion.button>
             </motion.div>
-
             <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -104,7 +105,7 @@ const LetsTalk = () => {
                     src="/lottie/web.json"
                     // loop={false}
                     style={{
-                        height: "400px",
+                        height: "450px",
                         width: "500px",
                     }}
                 />

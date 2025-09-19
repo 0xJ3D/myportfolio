@@ -17,7 +17,7 @@ const FlipLink = ({
             initial="initial"
             whileHover="hovered"
             href={href}
-            className=" relative block text-[#303030] overflow-hidden whitespace-nowrap text-4xl uppercase sm:text-3xl md:text-7xl lg:text-9xl font bg-[white]x"
+            className=" relative block text-[#100f0f] overflow-hidden whitespace-nowrap text-4xl uppercase sm:text-3xl md:text-7xl lg:text-9xl font bg-[white]x"
         >
             <motion.div
                 variants={{ initial: { y: 0 }, hovered: { y: "-100%" } }}
@@ -28,7 +28,7 @@ const FlipLink = ({
                 className="absolute inset-0"
                 variants={{ initial: { x: "100%" }, hovered: { x: 0 } }}
             >
-                <div className="flex flex-1 gap-2  items-center bg-[#303030] text-[#008383]">
+                <div className="flex flex-1 gap-2  items-center bg-[#303030] text-[#f6ffff]">
                     {children}
                 </div>
             </motion.div>

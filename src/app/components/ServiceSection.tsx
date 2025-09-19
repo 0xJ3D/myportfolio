@@ -26,7 +26,7 @@ const headerVariants = {
         y: 0,
         opacity: 1,
         transition: {
-            type: "spring",
+            type: "spring" as const,
             stiffness: 100,
             damping: 12,
             duration: 0.8,
@@ -43,7 +43,7 @@ const scrollIndicatorVariants = {
         scale: 1,
         opacity: 1,
         transition: {
-            type: "spring",
+            type: "spring" as const,
             stiffness: 200,
             damping: 15,
             delay: 0.3,
@@ -53,7 +53,7 @@ const scrollIndicatorVariants = {
 
 export default function ServicesSection() {
     return (
-        <div className="min-h-screen bg-[#fcfffc]x py-20 px-4 md:px-8 lg:px-16">
+        <section className="min-h-screen bg-[#fcfffc]x py-20 px-4 md:px-8 lg:px-16">
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="flex justify-between items-start mb-16">
@@ -136,6 +136,6 @@ export default function ServicesSection() {
                     })}
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
 }
