@@ -1,3 +1,4 @@
+"use client";
 import "./parallax.css";
 import { useRef } from "react";
 import {
