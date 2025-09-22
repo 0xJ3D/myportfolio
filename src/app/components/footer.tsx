@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Copy, Mail, ExternalLink } from "lucide-react";
+import { Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 const Footer = () => {
     const socialLinks = [
         { name: "X (TWITTER)", url: "https://twitter.com" },

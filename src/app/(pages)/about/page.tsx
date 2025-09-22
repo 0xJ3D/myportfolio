@@ -17,7 +17,7 @@ export default function Home() {
             setCurrent((prev) => (prev + 1) % roles.length);
         }, intervalMs);
         return () => clearInterval(timer);
-    }, []);
+    }, [roles.length]);
     return (
         <>
             <div

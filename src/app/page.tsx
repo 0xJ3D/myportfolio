@@ -8,7 +8,7 @@ import LetsTalk from "./components/LetsTalk";
 
 export default function Home() {
     return (
-        < >
+        <>
             <Hero />
             <Stack baseVelocity={4} />
             <ServicesSection />
@@ -16,3 +16,4 @@ export default function Home() {
             <BrandShowcase />
         </>
     );
+}

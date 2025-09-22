@@ -35,7 +35,7 @@ export default function RootLayout({
             <html lang="en">
                 <ReactLenis root>
                     <body
-                        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden flex flex-col relative  bg-[#ff8360] `}
+                        className={`${ojuju.variable} ${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden flex flex-col relative  bg-[#ff8360] `}
                     >
                         <Navbar />
                         {children}
