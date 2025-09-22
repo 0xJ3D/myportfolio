@@ -12,9 +12,9 @@ const cardVariants = {
     },
     visible: {
         x: 0,
-        opacity: 10,
+        opacity: 1,
         transition: {
-            type: "spring",
+            type: "spring" as const,
             stiffness: 100,
             damping: 12,
             duration: 0.7,
@@ -86,7 +86,7 @@ export const ServiceCard: React.FC<{
                         transition={{
                             delay: 0.1 + index * 0.1,
                             duration: 0.6,
-                            type: "zoom",
+                            type: "spring",
                             stiffness: 200,
                         }}
                         // viewport={{ once: true }}
