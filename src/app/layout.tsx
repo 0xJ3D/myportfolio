@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, Ojuju } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
-import { ReactLenis } from "@/app/utils/lenis";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -33,15 +32,13 @@ export default function RootLayout({
     return (
         <>
             <html lang="en">
-                <ReactLenis root>
-                    <body
-                        className={`${ojuju.variable} ${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden flex flex-col relative  bg-[#ff8360] `}
-                    >
-                        <Navbar />
-                        {children}
-                        <Footer />
-                    </body>
-                </ReactLenis>
+                <body
+                    className={`${ojuju.variable} ${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden flex flex-col relative  bg-[#ff8360] `}
+                >
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </body>
             </html>
         </>
     );
