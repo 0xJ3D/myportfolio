@@ -3,16 +3,16 @@ import Stack from "./components/stack";
 import ServicesSection from "./components/ServiceSection";
 import BrandShowcase from "./components/BrandShowcase";
 import LetsTalk from "./components/LetsTalk";
-import ClientLenis from "./components/ClientLenis";
+import DynamicClientLenis from "./components/DynamicClientLenis";
 
 export default function Home() {
     return (
-        <ClientLenis>
+        <DynamicClientLenis>
             <Hero />
             <Stack baseVelocity={4} />
             <ServicesSection />
             <LetsTalk />
             <BrandShowcase />
-        </ClientLenis>
+        </DynamicClientLenis>
     );
 }
