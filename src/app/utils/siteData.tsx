@@ -1,14 +1,13 @@
-import { FileText, User, HomeIcon, GalleryHorizontal } from "lucide-react";
+import { User } from "lucide-react";
 import { MonitorSmartphone, BrainCircuit, Cloud } from "lucide-react";
 
 const navLinks = [
-    { label: "Home", path: "/", icon: <HomeIcon size={16} /> },
-    { label: "About", path: "/about", icon: <User size={16} /> },
-    { label: "Portfolio", path: "/projects", icon: <FileText size={16} /> },
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Work", path: "/projects" },
     {
         label: "Gallery",
         path: "/photos",
-        icon: <GalleryHorizontal size={16} />,
     },
 ];
 
@@ -43,8 +42,7 @@ const quickLinks = [
 ];
 
 const contactInfo = {
-    email: "ejdunia@gmail.com",
-    // phone: "+",
+    email: "hello@elnathan.dev",
 };
 
 const WhatIDoDetails = [

@@ -4,6 +4,8 @@ import ServicesSection from "./components/ServiceSection";
 import BrandShowcase from "./components/BrandShowcase";
 import LetsTalk from "./components/LetsTalk";
 import DynamicClientLenis from "./components/DynamicClientLenis";
+import SayHi from "./components/SayHi";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
     return (
@@ -13,6 +15,8 @@ export default function Home() {
             <ServicesSection />
             <LetsTalk />
             <BrandShowcase />
+            <SayHi />
+            <ContactForm />
         </DynamicClientLenis>
     );
 }

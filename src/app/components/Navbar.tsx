@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import React from "react";
 import { navLinks } from "../utils/siteData";
 import Link from "next/link";
 import * as motion from "motion/react-client";
@@ -23,7 +23,6 @@ const Navbar = () => {
                         key={navLink.label}
                         label={navLink.label}
                         path={navLink.path}
-                        icon={navLink.icon}
                     />
                 ))}
             </div>
@@ -34,11 +33,10 @@ const Navbar = () => {
 
 interface NavItemProps {
     label: string;
-    icon: JSX.Element;
     isActive?: boolean;
     path: string;
 }
-const NavItem = ({ label, icon, path, isActive = false }: NavItemProps) => {
+const NavItem = ({ label, path, isActive = false }: NavItemProps) => {
     return (
         <Link
             href={path}
@@ -49,7 +47,6 @@ const NavItem = ({ label, icon, path, isActive = false }: NavItemProps) => {
             } transition-colors duration-200`}
         >
             <span>{label}</span>
-            <span className="flex items-center">{icon}</span>
         </Link>
     );
 };

@@ -2,6 +2,8 @@
 
 import { Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import * as motion from "motion/react-client";
+
 const Footer = () => {
     const socialLinks = [
         { name: "X (TWITTER)", url: "https://twitter.com" },
@@ -9,7 +11,12 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="p-8 bg-[white]">
+        <motion.footer
+            initial={{ y: 1000 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 2 }}
+            className="p-8 bg-[white]"
+        >
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Contact Section */}
                 <div>
@@ -98,7 +105,7 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} All rights reserved.
                 </p>
             </div>
-        </footer>
+        </motion.footer>
     );
 };
 
