@@ -15,7 +15,7 @@ const Footer = () => {
             initial={{ y: 1000 }}
             animate={{ y: 0 }}
             transition={{ duration: 2 }}
-            className="p-8 bg-[white]"
+            className="bg-[white]   px-2 md:px-5"
         >
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Contact Section */}
@@ -90,18 +90,17 @@ const Footer = () => {
                         </h3>
                     </div>
                     <h2
-                        className="font-bold text-8xl  mt-4"
+                        className="font-bold text-[5.6rem] md:text-8xl  mt-4"
                         style={{
                             fontFamily: "Ojuju",
-                            // border: "2px solid red",
                         }}
                     >
                         Elnathan
                     </h2>
                 </div>
             </div>
-            <div className="flex flex-col items-center">
-                <p className="text-lg font-mono p-2">
+            <div className="flex flex-col items-center ">
+                <p className="text-lg py-6 my-4">
                     &copy; {new Date().getFullYear()} All rights reserved.
                 </p>
             </div>

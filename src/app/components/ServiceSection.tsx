@@ -54,7 +54,7 @@ const scrollIndicatorVariants = {
 
 export default function ServicesSection() {
     return (
-        <section className="min-h-screen bg-[#fcfffc]x py-20 px-4 md:px-8 lg:px-16">
+        <section className=" min-h-screen bg-[#fcfffc]x py-20 px-4 md:px-8 lg:px-16">
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="flex justify-between items-start mb-16">

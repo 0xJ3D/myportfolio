@@ -1,33 +1,85 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { navLinks } from "../utils/siteData";
 import Link from "next/link";
-import * as motion from "motion/react-client";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
-        <motion.nav
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-            className=" bg-[#07090f] mt-2 px-10 mx-5  flex items-center justify-between rounded-t-lg"
-        >
-            <div className="font-bold text-xl italic text-black">
-                <Link
-                    href={"/"}
-                    className="text-[#ff8360]"
-                >{`elnathan.</>`}</Link>
-            </div>
-            <div className="bg-[#ff8360]x  rounded-b-3xl px-6 py-5 flex items-center justify-center space-x-6">
-                {navLinks.map((navLink) => (
-                    <NavItem
-                        key={navLink.label}
-                        label={navLink.label}
-                        path={navLink.path}
-                    />
-                ))}
-            </div>
-            <div className="flex items-center space-x-4  rounded-full px-6 py-3"></div>
-        </motion.nav>
+        <>
+            <motion.nav
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-[#07090f] mt-2 px-10 mx-2 md:mx-5 flex items-center justify-between rounded-t-lg"
+            >
+                <div className="font-bold text-xl italic text-black">
+                    <Link
+                        href={"/"}
+                        className="text-[#ff8360]"
+                    >{`elnathan.</>`}</Link>
+                </div>
+                <div className="hidden  md:flex bg-[#ff8360]x rounded-b-3xl px-2 md:px-6 py-5 items-center justify-center space-x-6">
+                    {navLinks.map((navLink) => (
+                        <NavItem
+                            key={navLink.label}
+                            label={navLink.label}
+                            path={navLink.path}
+                        />
+                    ))}
+                </div>
+                <div className="md:hidden flex items-center">
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="text-[#ff8360] focus:outline-none"
+                    >
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            {isMenuOpen ? (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            ) : (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h16m-7 6h7"
+                                />
+                            )}
+                        </svg>
+                    </button>
+                </div>
+            </motion.nav>
+            {isMenuOpen && (
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="md:hidden bg-[#07090f] mx-2 px-2 py-5 rounded-b-lg"
+                >
+                    <div className="flex flex-col items-center space-y-4">
+                        {navLinks.map((navLink) => (
+                            <NavItem
+                                key={navLink.label}
+                                label={navLink.label}
+                                path={navLink.path}
+                            />
+                        ))}
+                    </div>
+                </motion.div>
+            )}
+        </>
     );
 };
 

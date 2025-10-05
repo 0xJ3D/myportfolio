@@ -35,7 +35,7 @@ const LetsTalk = () => {
     return (
         <div
             ref={ref}
-            className="flex flex-col md:flex-row items-center justify-between py-12 px-4 md:px-8 lg:px-16 bg-whitex"
+            className="flex flex-col md:flex-row items-center justify-between py-4 px-2 md:px-8 lg:px-16"
         >
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -43,17 +43,13 @@ const LetsTalk = () => {
                 transition={{ duration: 0.5 }}
                 className="w-full md:w-1/2 mb-10 md:mb-0"
             >
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#07090f] mb-4">
-                    Got an Idea?
-                </h2>
-
-                <div className="flex items-center mb-8">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#07090f] mr-4">
+                <div className="flex flex-wrap items-center mb-8">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#07090f]">
                         Let&apos;s create together!
                     </h1>
 
                     <motion.div
-                        className="flex"
+                        className="flex mt-1"
                         initial="hidden"
                         animate={inView ? "visible" : "hidden"}
                         variants={{
@@ -84,27 +80,15 @@ const LetsTalk = () => {
                         ))}
                     </motion.div>
                 </div>
-
-                <motion.button
-                    initial={{ opacity: 0 }}
-                    animate={inView ? { opacity: 1 } : {}}
-                    // transition={{ delay: 0.8 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-3 bg-[#07090f] text-white rounded-full font-medium text-lg mt-6 "
-                >
-                    Get in touch
-                </motion.button>
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.2, duration: 0.7 }}
-                className="w-full md:w-1/2 flex justify-center"
+                className="hidden w-full md:w-1/2 md:flex justify-center"
             >
                 <LottieAnimation
                     src="/lottie/web.json"
-                    // loop={false}
                     style={{
                         height: "450px",
                         width: "500px",
