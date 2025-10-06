@@ -50,6 +50,7 @@ const Hero = () => {
                         >
                             Software Developer
                         </motion.h2>
+                        <motion.div className="border w-full"></motion.div>
                         <motion.h3 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-3 text-[#fcfcfc]">
                             Support Specialist
                         </motion.h3>
@@ -99,7 +100,7 @@ const Hero = () => {
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-3 bg-[white]x text-[#ff8360] text-lg font-bold rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 border-[#ff8360]"
                     >
-                        Contact Me
+                        Let&apos;s talk
                     </motion.button>
                 </motion.div>
             </div>

@@ -33,7 +33,7 @@ const Navbar = () => {
                 <div className="md:hidden flex items-center">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="text-[#ff8360] focus:outline-none"
+                        className="text-[#ff8360] focus:outline-none z-100"
                     >
                         <svg
                             className="w-6 h-6"
@@ -63,12 +63,13 @@ const Navbar = () => {
             </motion.nav>
             {isMenuOpen && (
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="md:hidden bg-[#07090f] mx-2 px-2 py-5 rounded-b-lg"
+                    initial={{ x: "-100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "-100%" }}
+                    transition={{ duration: 0.3 }}
+                    className="fixed top-0 left-0 h-screen w-full bg-[#07090f] z-50 md:hidden flex flex-col"
                 >
-                    <div className="flex flex-col items-center space-y-4">
+                    <div className="flex flex-col items-center justify-center flex-grow space-y-4">
                         {navLinks.map((navLink) => (
                             <NavItem
                                 key={navLink.label}
@@ -77,6 +78,12 @@ const Navbar = () => {
                             />
                         ))}
                     </div>
+                    <button
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-white uppercase text-sm font-medium mb-10"
+                    >
+                        Close
+                    </button>
                 </motion.div>
             )}
         </>

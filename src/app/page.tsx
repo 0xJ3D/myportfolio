@@ -13,7 +13,7 @@ export default function Home() {
             <Hero />
             <Stack baseVelocity={4} />
             <ServicesSection />
-            <BrandShowcase />
+            {/* <BrandShowcase /> */}
             <SayHi />
             <LetsTalk />
             <ContactForm />
