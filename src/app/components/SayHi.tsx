@@ -4,7 +4,7 @@ import LottieAnimation from "./LottieAnimation";
 const SayHi = () => {
     return (
         <div>
-            <section className="flex flex-wrap items-center justify-center p-8x">
+            <section className="flex flex-wrap items-center md:justify-center  px-2 md:px-5">
                 <div className="hidden md:block">
                     <LottieAnimation
                         src="/lottie/contact.json"
@@ -17,8 +17,7 @@ const SayHi = () => {
 
                 <div className="">
                     <div className="">
-                        {/* Left side - Large text */}
-                        <div className="flex flex-col justify-center ">
+                        <div className="flex flex-col justify-centerx">
                             <h1 className="text-[clamp(4rem,15vw,12rem)] font-black leading-none tracking-tighter text-[black]">
                                 CONTACT
                             </h1>
@@ -35,7 +34,6 @@ const SayHi = () => {
                     </div>
                 </div>
             </section>
-            <div></div>
         </div>
     );
 };

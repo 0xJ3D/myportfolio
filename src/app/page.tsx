@@ -13,9 +13,9 @@ export default function Home() {
             <Hero />
             <Stack baseVelocity={4} />
             <ServicesSection />
-            <LetsTalk />
-            <BrandShowcase />
+            {/* <BrandShowcase /> */}
             <SayHi />
+            <LetsTalk />
             <ContactForm />
         </DynamicClientLenis>
     );

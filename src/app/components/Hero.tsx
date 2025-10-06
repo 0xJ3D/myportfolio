@@ -16,9 +16,9 @@ const Hero = () => {
                 scale: { type: "spring", bounce: 0.4 },
                 delayChildren: 0.3,
             }}
-            className="flex flex-col w-full justify-center items-center px-3 md:px-5 rounded-b-lg  overflow-x-hidden"
+            className="flex flex-col w-full justify-center items-center px-2 md:px-5 rounded-b-lg  overflow-x-hidden"
         >
-            <div className="border2 border-[#ffffff]s rounded-b-lg p-5 px-10  bg-[#141313]x bg-[#07090f] w-full  ">
+            <div className="borderx rounded-b-lg p-5 px-10 bg-[#07090f] w-full  ">
                 {/* Content Container */}
                 <div className=" flex flex-col-reverse lg:flex-row justify-between items-center w-full gap-12 mb-16">
                     {/* Text Content */}
@@ -30,7 +30,7 @@ const Hero = () => {
                             transition={{ delay: 0.2 }}
                         >
                             Hello{" "}
-                            <span className="-m-5 inline text-[#ff8360]">
+                            <span className="-m-3 inline text-[#ff8360]">
                                 .
                             </span>{" "}
                             <br />
@@ -50,6 +50,7 @@ const Hero = () => {
                         >
                             Software Developer
                         </motion.h2>
+                        <motion.div className="border w-full"></motion.div>
                         <motion.h3 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-3 text-[#fcfcfc]">
                             Support Specialist
                         </motion.h3>
@@ -68,13 +69,15 @@ const Hero = () => {
                     </div>
 
                     {/* Image Container */}
-                    <LottieAnimation
-                        src="/lottie/software.json"
-                        style={{
-                            height: "400px",
-                            width: "500px",
-                        }}
-                    />
+                    <div className="hidden md:block">
+                        <LottieAnimation
+                            src="/lottie/software.json"
+                            style={{
+                                height: "400px",
+                                width: "500px",
+                            }}
+                        />
+                    </div>
                 </div>
 
                 {/* Buttons */}
@@ -97,7 +100,7 @@ const Hero = () => {
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-3 bg-[white]x text-[#ff8360] text-lg font-bold rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 border-[#ff8360]"
                     >
-                        Contact Me
+                        Let&apos;s talk
                     </motion.button>
                 </motion.div>
             </div>
