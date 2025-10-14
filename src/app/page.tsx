@@ -1,10 +1,8 @@
 import Hero from "./components/Hero";
 import Stack from "./components/stack";
 import ServicesSection from "./components/ServiceSection";
-import BrandShowcase from "./components/BrandShowcase";
 import LetsTalk from "./components/LetsTalk";
 import DynamicClientLenis from "./components/DynamicClientLenis";
-import SayHi from "./components/SayHi";
 import ContactForm from "./components/ContactForm";
 
 export default function Home() {
@@ -13,8 +11,6 @@ export default function Home() {
             <Hero />
             <Stack baseVelocity={4} />
             <ServicesSection />
-            {/* <BrandShowcase /> */}
-            <SayHi />
             <LetsTalk />
             <ContactForm />
         </DynamicClientLenis>

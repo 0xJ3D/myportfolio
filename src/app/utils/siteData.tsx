@@ -54,7 +54,7 @@ const WhatIDoDetails = [
         bg: "/icons/monitor.svg",
     },
     {
-        title: "AI Automation and Integration",
+        title: "AI Agents and Integration",
         description:
             "Bring your site to the top of search results and keep users engaged with fast load times.",
         icon: BrainCircuit,

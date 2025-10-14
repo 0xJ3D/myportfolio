@@ -9,8 +9,8 @@ const SayHi = () => {
                     <LottieAnimation
                         src="/lottie/contact.json"
                         style={{
-                            height: "400px",
-                            width: "400px",
+                            height: "100px",
+                            width: "100px",
                         }}
                     />
                 </div>
@@ -18,13 +18,13 @@ const SayHi = () => {
                 <div className="">
                     <div className="">
                         <div className="flex flex-col justify-centerx">
-                            <h1 className="text-[clamp(4rem,15vw,12rem)] font-black leading-none tracking-tighter text-[black]">
+                            <h1 className="text-[clamp(1rem,5vw,2rem)] font-black leading-none tracking-tighter text-[black]">
                                 CONTACT
                             </h1>
                             <div
-                                className="text-[clamp(4rem,15vw,12rem)] font-black leading-none tracking-tighter"
+                                className="text-[clamp(1rem,5vw,2rem)]  font-black leading-none tracking-tighter"
                                 style={{
-                                    WebkitTextStroke: "2px black",
+                                    WebkitTextStroke: "1px black",
                                     color: "transparent",
                                 }}
                             >

@@ -61,19 +61,18 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
                         >
-                            I build intuitive, responsive websites and web
-                            applications. Let&apos;s collaborate to drive
-                            results for your business and turn your vision into
-                            digital reality.
+                            I specalise in building intuitive, responsive
+                            websites and applications, AI Agentic workflows and
+                            setting up scalable infrastructure solutions.
                         </motion.p>
                     </div>
 
                     {/* Image Container */}
                     <div className="hidden md:block">
                         <LottieAnimation
-                            src="/lottie/software.json"
+                            src="/lottie/web.json"
                             style={{
-                                height: "400px",
+                                height: "500px",
                                 width: "500px",
                             }}
                         />
