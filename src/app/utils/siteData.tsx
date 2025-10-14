@@ -49,22 +49,22 @@ const WhatIDoDetails = [
     {
         title: "Bespoke Digital Experiences",
         description:
-            "Stunning websites that reflect your brand and captivate your audience.",
+            "I craft responsive, accessibility-first websites and applications that feel native on every screen. Starting with design files or a rough brief, I translate ideas into pixel-perfect interfaces using modern component libraries and CSS frameworks",
         icon: MonitorSmartphone,
         bg: "/icons/monitor.svg",
     },
     {
-        title: "AI Agents and Integration",
+        title: "AI Agents and Autonomous Workflows",
         description:
-            "Bring your site to the top of search results and keep users engaged with fast load times.",
+            "I build AI agent that turn prompts, documents and APIs into reliable business processes. Using orchestration engines like n8n, I stitch together human-in-the-loop approvals and intelligent fall-back models, while enforcing cost-and-latency guardrails in code.",
         icon: BrainCircuit,
         bg: "/icons/brain.svg",
     },
 
     {
-        title: "Hosting and Cloud support",
+        title: "Cloud & 0 Downtime Hosting",
         description:
-            "System optimization, troubleshooting, cloud integration. ensuring your digital infrastructure runs smoothly.",
+            "Optimized Infrastructure, troubleshooting, cloud integration rolled out with zero downtime. I spin up secure VPCs, container clusters or serverless stacks on the cloud, with CI/CD pipelines and monitoring to keep things running smoothly.",
         icon: Cloud,
         bg: "/icons/cloud.svg",
     },

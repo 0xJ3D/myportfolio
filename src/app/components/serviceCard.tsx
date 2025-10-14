@@ -1,10 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, LucideIcon } from "lucide-react";
-import React from "react";
+import { LucideIcon } from "lucide-react";
+import React, { useState } from "react";
 
 // Animation variants
-
 const cardVariants = {
     hidden: {
         x: -100,
@@ -21,6 +20,7 @@ const cardVariants = {
         },
     },
 };
+
 type WhatIDoDetailsType = {
     title: string;
     description: string;
@@ -32,7 +32,12 @@ export const ServiceCard: React.FC<{
     wid: WhatIDoDetailsType;
     index: number;
 }> = ({ wid, index }) => {
+    const [isClicked, setIsClicked] = useState(false);
     const Icon = wid.icon;
+
+    const handleMouseLeave = () => {
+        setIsClicked(false);
+    };
 
     return (
         <motion.div
@@ -49,12 +54,12 @@ export const ServiceCard: React.FC<{
                 transition: { duration: 0.4, ease: "easeOut" },
             }}
             whileTap={{ scale: 0.98 }}
+            onMouseLeave={handleMouseLeave}
         >
             <motion.div
                 key={wid.title}
                 className="
-                  relative h-120 rounded-lg  cursor-pointer bg-[#07090f] hover:border-2  text-[#ff8360] border-[#ff8360]
-                  hover:
+                  relative h-120 rounded-lg cursor-pointer bg-[#07090f] hover:border-2 text-[#ff8360] border-[#ff8360]
                 "
                 variants={cardVariants}
                 whileHover={{
@@ -68,11 +73,12 @@ export const ServiceCard: React.FC<{
                     },
                 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => setIsClicked(!isClicked)}
             >
                 <div className="p-8 h-full flex flex-col justify-between">
                     {/* Icon */}
                     <motion.div
-                        className="mb-8"
+                        className="mb-8 "
                         initial={{
                             scale: 0,
                             x: -20,
@@ -89,56 +95,42 @@ export const ServiceCard: React.FC<{
                             type: "spring",
                             stiffness: 200,
                         }}
-                        // viewport={{ once: true }}
                     >
                         <Icon className={`w-12 h-12 ${"text-[#ff8360]"}`} />
                     </motion.div>
 
                     {/* Title */}
                     <motion.div
-                        className="flex-1"
+                        className=" mb-5 "
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{
                             delay: 0.4 + index * 0.1,
                             duration: 0.6,
                         }}
-                        // viewport={{ once: true }}
                     >
                         <h3 className="text-xl font-bold leading-tight mb-4">
                             {wid.title}
                         </h3>
                     </motion.div>
 
-                    {/* Read More Button */}
-                    <motion.button
-                        className={`
-                      flex items-center gap-2 text-sm font-medium group
-                      ${"text-[#ff8360]"}
-                    `}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{
-                            delay: 0.5 + index * 0.1,
-                            duration: 0.6,
+                    {/* Description - Only visible when clicked */}
+                    <motion.div
+                        className="flex-1 overflow-hidden"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{
+                            opacity: isClicked ? 1 : 0,
+                            height: isClicked ? "auto" : 0,
                         }}
-                        viewport={{ once: true }}
-                        whileHover={{ x: 5 }}
+                        transition={{
+                            duration: 0.3,
+                            ease: "easeInOut",
+                        }}
                     >
-                        READ MORE
-                        <motion.div
-                            whileHover={{ x: 3 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 400,
-                                damping: 10,
-                            }}
-                        >
-                            <ArrowRight className="w-4 h-4" />
-                        </motion.div>
-                    </motion.button>
+                        <p className="text-xl font-bold">{wid.description}</p>
+                    </motion.div>
                 </div>
-            </motion.div>{" "}
+            </motion.div>
         </motion.div>
     );
 };
