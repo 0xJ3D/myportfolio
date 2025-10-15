@@ -70,4 +70,116 @@ const WhatIDoDetails = [
     },
 ];
 
-export { navLinks, socialLinks, contactInfo, WhatIDoDetails, quickLinks };
+const projects = [
+    {
+        title: "Gracetech Properties",
+        description:
+            "Gracetech Properties is the real estate investment arm of Gracetech Group, offering asset management and property development advisory services with innovative designs and modern living solutions.",
+        tags: ["NEXTJS", "SHADCN UI", "TYPESCRIPT"],
+        link: "https://gracetechproperties.com",
+    },
+    {
+        title: "Partner Mobile",
+        description:
+            "Partner Mobile is a tech company that provides high-speed fiber optic internet connectivity and offers a wide range of mobile phones and accessories. The platform ensures seamless user experience and reliable services through a scalable and secure backend system.",
+        tags: ["NESTJS", "DOCKER", "KAFKA", "SENTRY", "POSTGRESQL"],
+        featured: true,
+    },
+    {
+        title: "Booking Corps",
+        description:
+            "BookingCorps simplifies your travel plans with easy-to-use services for booking hotels, shortlets, and car rentals all in one place.",
+        tags: ["NGINX", "DOCKER", "CPANEL", "CI/CD", "STRIPE"],
+    },
+    {
+        title: "Tiqbuy",
+        description:
+            "TiqBuy is an innovative eCommerce website that offers a seamless shopping experience with a wide range of products and intuitive features.",
+        tags: [
+            "WORDPRESS",
+            "WOOCOMMERCE",
+            "NEXTJS",
+            "MEDUSAJS",
+            "POSTGRESQL",
+            "REDIS",
+        ],
+        link: "https://tiqbuy.com",
+    },
+    {
+        title: "Tiqpay",
+        description:
+            "TiqPay is a cutting-edge fintech application designed to streamline transactions and elevate your financial management experience.",
+        tags: [
+            "TYPESCRIPT",
+            "NEXTJS",
+            "POSTGRESQL",
+            "NESTJS",
+            "REACT NATIVE(EXPO)",
+        ],
+        featured: true,
+    },
+];
+
+const experiences = [
+    {
+        company: "Partner Mobile",
+        role: "Software Engineer",
+        period: "Mar 2025 -",
+        achievements: [
+            "Designed and developed RESTful APIs using NestJS, enabling seamless communication between the mobile frontend and backend services.",
+            "Built a scalable backend architecture with NestJS and Docker, improving deployment and service uptime by 40%.",
+            "Integrated Kafka to manage background tasks and queues, enhancing system throughput by over 50%.",
+            "Implemented Paystack for secure payment processing and Sentry for real-time monitoring, reducing transaction failures by 30% and cutting bug resolution time by 35%.",
+        ],
+    },
+    {
+        company: "Booking Corps",
+        role: "Software Engineer",
+        period: "Jul 2024 - Feb 2025",
+        achievements: [
+            "Collaborated with UI/UX designers and external teams to develop a hotel and shortlet booking platform, increasing user engagement by 25%.",
+            "Integrated Stripe and Paystack for secure payments, reducing failed transactions by 40% and improving checkout reliability.",
+            "Conducted internal deployments and testing that enhanced system uptime to 99.9%.",
+        ],
+    },
+    {
+        company: "Tiqbuy",
+        role: "Software Engineer",
+        period: "Sep 2023 - Jan 2025",
+        achievements: [
+            "Led migration of the e-commerce platform to a Next.js MedusaJS-powered stack, improving page load speed by 45%.",
+            "Built real-time dashboards tracking user behavior and product performance, enabling a 35% increase in marketing ROI through better targeting.",
+            "Supported a cross-functional team of 6 developers and marketers in implementing analytics tools that reduced decision-making time by 20%.",
+        ],
+    },
+    {
+        company: "Gracetech Group",
+        role: "Lead Software Engineer",
+        period: "Jun 2023 -",
+        achievements: [
+            "Spearheaded development of a biometric-based ERP attendance system used by 100+ employees, improving attendance accuracy by 85%.",
+            "Designed and launched a ticketing help desk system that reduced average support resolution time from 5 days to 1.5 days (70% improvement).",
+            "Increased user satisfaction scores by 40% through streamlined support workflows.",
+        ],
+    },
+    {
+        company: "Tiqpay",
+        role: "Software Engineer",
+        period: "May 2024 -",
+        achievements: [
+            "Managed core banking IT operations, reducing system downtime by 30%.",
+            "Created and assigned staff profiles on internal systems, improving onboarding efficiency by 50%.",
+            "Developed a secure desktop plugin for transaction validation, increasing fraud detection accuracy by 60%.",
+            "Coordinated frontend integration with the Tiqpay gateway, ensuring 100% compatibility.",
+        ],
+    },
+];
+export {
+    navLinks,
+    socialLinks,
+    contactInfo,
+    WhatIDoDetails,
+    quickLinks,
+    projects,
+    experiences,
+};

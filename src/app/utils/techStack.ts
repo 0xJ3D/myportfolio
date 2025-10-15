@@ -13,6 +13,8 @@ import {
     SiPostgresql,
     SiTailwindcss,
     SiGnubash,
+    SiGit,
+    SiWoocommerce,
 } from "react-icons/si";
 
 const techStack = [
@@ -30,6 +32,8 @@ const techStack = [
     { name: "HTML5", icon: SiHtml5 },
     { name: "Bash", icon: SiGnubash },
     { name: "Tailwind", icon: SiTailwindcss },
+    { name: "Woocommerce", icon: SiWoocommerce },
+    { name: "Git", icon: SiGit },
 ];
 
 export default techStack;

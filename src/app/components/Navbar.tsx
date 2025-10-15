@@ -16,10 +16,7 @@ const Navbar = () => {
                 className="bg-[#07090f] mt-2 px-10 mx-2 md:mx-5 flex items-center justify-between rounded-t-lg"
             >
                 <div className="font-bold text-xl italic text-black">
-                    <Link
-                        href={"/"}
-                        className="text-[#ff8360]"
-                    >{`elnathan.</>`}</Link>
+                    <Link href={"/"} className="text-[#ff8360]">{`<E/>`}</Link>
                 </div>
                 <div className="hidden  md:flex bg-[#ff8360]x rounded-b-3xl px-2 md:px-6 py-5 items-center justify-center space-x-6">
                     {navLinks.map((navLink) => (

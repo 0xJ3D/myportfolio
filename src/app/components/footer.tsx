@@ -15,7 +15,7 @@ const Footer = () => {
             initial={{ y: 1000 }}
             animate={{ y: 0 }}
             transition={{ duration: 2 }}
-            className="bg-[white]   px-2 md:px-5"
+            className="bg-[white] px-2 md:px-5 pt-5 md:pt-10"
         >
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Contact Section */}
