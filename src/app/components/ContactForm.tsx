@@ -32,7 +32,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-6 bg-background">
+        <div className="flex items-center justify-center p-6 bg-gray-100 ">
             <form
                 onSubmit={handleSubmit}
                 className="w-full max-w-4xl space-y-8"

@@ -1,9 +1,17 @@
 "use client";
-import { experiences } from "@/app/utils/siteData";
+import { experiences, skillsData } from "@/app/utils/siteData";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "@/app/components/ExperienceCard";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
+import { SkillCard } from "@/app/components/SkillCard";
 
 export default function Home() {
     const roles = ["FULLSTACK", "FRONTEND", "BACKEND", "MOBILE", "AI Agent"];
@@ -107,6 +115,53 @@ export default function Home() {
                         <ExperienceCard key={index} experience={experience} />
                     ))}
                 </div>
+            </div>
+            <div>
+                {" "}
+                <section className="w-full py-16 px-1 ">
+                    <div className="md:mx-12">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-tight mb-2">
+                            Technical Skills
+                        </h2>
+                        <div className="max-w-[500px]">
+                            <p className="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4">
+                                This is a curated list of languages,
+                                technologies, and frameworks that I&apos;ve
+                                worked with across various projects with varying
+                                experience with each.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="container mx-auto max-w-7xl">
+                        {/* Desktop Grid View */}
+                        <div className="hidden md:grid md:grid-cols-2 gap-6 lg:gap-8">
+                            {skillsData.map((skill) => (
+                                <SkillCard key={skill.id} skill={skill} />
+                            ))}
+                        </div>
+
+                        {/* Mobile Carousel View */}
+                        <div className="md:hidden">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: true,
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent>
+                                    {skillsData.map((skill) => (
+                                        <CarouselItem key={skill.id}>
+                                            <SkillCard skill={skill} />
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious className="left-2" />
+                                <CarouselNext className="right-2" />
+                            </Carousel>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     );

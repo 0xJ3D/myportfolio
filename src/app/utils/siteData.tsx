@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+import { Code2, Monitor, Server, User, Workflow } from "lucide-react";
 import { MonitorSmartphone, BrainCircuit, Cloud } from "lucide-react";
 
 const navLinks = [
@@ -119,7 +119,94 @@ const projects = [
         featured: true,
     },
 ];
-
+const skillsData = [
+    {
+        id: "frontend",
+        title: "Frontend",
+        icon: Monitor,
+        categories: [
+            {
+                name: "Languages",
+                items: ["JavaScript", "TypeScript", "HTML", "CSS"],
+            },
+            {
+                name: "Frameworks & Libraries",
+                items: ["React", "Next.js", "Vue.js", "Angular"],
+            },
+            {
+                name: "Design Systems",
+                items: ["Tailwind CSS", "Material UI", "shadcn/ui"],
+            },
+            {
+                name: "State Management",
+                items: ["Redux", "Zustand", "React Query"],
+            },
+            { name: "UI/UX Design", items: ["Figma", "Adobe XD", "Sketch"] },
+        ],
+    },
+    {
+        id: "backend",
+        title: "Backend",
+        icon: Server,
+        categories: [
+            { name: "Languages", items: ["Node.js", "Python", "Java", "Go"] },
+            {
+                name: "Frameworks",
+                items: ["Express", "NestJS", "Django", "FastAPI"],
+            },
+            {
+                name: "APIs & Databases",
+                items: ["PostgreSQL", "MongoDB", "Redis", "GraphQL"],
+            },
+            {
+                name: "Mapping & Visualization APIs",
+                items: ["Mapbox", "Google Maps", "D3.js"],
+            },
+            {
+                name: "Authentication",
+                items: ["JWT", "OAuth", "Auth0", "NextAuth"],
+            },
+        ],
+    },
+    {
+        id: "tooling",
+        title: "Tooling",
+        icon: Code2,
+        categories: [
+            {
+                name: "Build Tools",
+                items: ["Webpack", "Vite", "Turbopack", "esbuild"],
+            },
+            {
+                name: "Testing & Debugging",
+                items: ["Jest", "Vitest", "Playwright", "Cypress"],
+            },
+            {
+                name: "Environment & Deployment Tools",
+                items: ["Docker", "Vercel", "AWS", "Kubernetes"],
+            },
+        ],
+    },
+    {
+        id: "workflows",
+        title: "Workflows",
+        icon: Workflow,
+        categories: [
+            {
+                name: "Version Control & DevOps",
+                items: ["Git", "GitHub Actions", "GitLab CI", "Jenkins"],
+            },
+            {
+                name: "Agile Methodologies",
+                items: ["Scrum", "Kanban", "Sprint Planning"],
+            },
+            {
+                name: "Project Management & Collaboration Tools",
+                items: ["Jira", "Linear", "Notion", "Slack"],
+            },
+        ],
+    },
+];
 const experiences = [
     {
         company: "Partner Mobile",
@@ -182,4 +269,5 @@ export {
     quickLinks,
     projects,
     experiences,
+    skillsData,
 };

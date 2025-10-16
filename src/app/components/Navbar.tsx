@@ -7,18 +7,22 @@ import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <>
             <motion.nav
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-[#07090f] mt-2x py-1 px-4 md:px-10x mx-2x md:mx-5 flex items-center justify-between md:rounded-t-lgx"
+                className="bg-[#07090f] md:mx-5 px-10  flex items-center justify-between "
             >
                 <div className="font-bold text-xl italic text-black">
                     <Link href={"/"} className="text-[#ff8360]">{`<E/>`}</Link>
                 </div>
-                <div className="hidden  md:flex bg-[#ff8360]x rounded-b-3xl px-2 md:px-6 py-5 items-center justify-center space-x-6">
+                <div className="hidden  md:flex rounded-b-3xl px-2 md:px-6 py-5 items-center justify-center space-x-6">
                     {navLinks.map((navLink) => (
                         <NavItem
                             key={navLink.label}
@@ -27,7 +31,7 @@ const Navbar = () => {
                         />
                     ))}
                 </div>
-                <div className="md:hidden flex items-center">
+                <div className="md:hidden flex items-center py-4">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="text-[#ff8360] focus:outline-none z-100"
@@ -74,11 +78,12 @@ const Navbar = () => {
                                     key={navLink.label}
                                     label={navLink.label}
                                     path={navLink.path}
+                                    onClick={closeMenu} // Add onClick handler
                                 />
                             ))}
                         </div>
                         <button
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={closeMenu}
                             className="text-white uppercase text-sm font-medium mb-10"
                         >
                             Close
@@ -94,11 +99,13 @@ interface NavItemProps {
     label: string;
     isActive?: boolean;
     path: string;
+    onClick?: () => void;
 }
-const NavItem = ({ label, path, isActive = false }: NavItemProps) => {
+const NavItem = ({ label, path, isActive = false, onClick }: NavItemProps) => {
     return (
         <Link
             href={path}
+            onClick={onClick}
             className={`uppercase text-sm font-medium flex items-center space-x-2 ${
                 isActive
                     ? "text-white"
