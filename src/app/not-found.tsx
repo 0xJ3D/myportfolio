@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-[100dvh] w-full bg-background px-4 py-8">
+        <div className="flex flex-col items-center justify-center min-h-[80dvh] w-full bg-background px-4 py-8">
             <div className="flex flex-col items-center justify-center max-w-3xl w-full text-center">
                 <div className="w-full max-w-[500px] aspect-square">
                     <LottieAnimation
@@ -15,7 +15,12 @@ export default function NotFound() {
                         loop={true}
                     />
                 </div>
-
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-tight mb-2">
+                    Hol up
+                </h2>
+                <p className="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4">
+                    I&apos;m still cooking here, check back real soon
+                </p>
                 <Link href="/" passHref>
                     <Button size="lg" className="px-6 py-3 text-lg">
                         Go Back Home

@@ -9,6 +9,7 @@ const navLinks = [
         label: "Gallery",
         path: "/photos",
     },
+    { label: "Blog", path: "/blog" },
 ];
 
 const socialLinks = [
