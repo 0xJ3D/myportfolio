@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { navLinks } from "../utils/siteData";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-[#07090f] mt-2 px-10 mx-2 md:mx-5 flex items-center justify-between rounded-t-lg"
+                className="bg-[#07090f] mt-2x py-1 px-4 md:px-10x mx-2x md:mx-5 flex items-center justify-between md:rounded-t-lgx"
             >
                 <div className="font-bold text-xl italic text-black">
                     <Link href={"/"} className="text-[#ff8360]">{`<E/>`}</Link>
@@ -58,31 +58,34 @@ const Navbar = () => {
                     </button>
                 </div>
             </motion.nav>
-            {isMenuOpen && (
-                <motion.div
-                    initial={{ x: "-100%" }}
-                    animate={{ x: 0 }}
-                    exit={{ x: "-100%" }}
-                    transition={{ duration: 0.3 }}
-                    className="fixed top-0 left-0 h-screen w-full bg-[#07090f] z-50 md:hidden flex flex-col"
-                >
-                    <div className="flex flex-col items-center justify-center flex-grow space-y-4">
-                        {navLinks.map((navLink) => (
-                            <NavItem
-                                key={navLink.label}
-                                label={navLink.label}
-                                path={navLink.path}
-                            />
-                        ))}
-                    </div>
-                    <button
-                        onClick={() => setIsMenuOpen(false)}
-                        className="text-white uppercase text-sm font-medium mb-10"
+
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ x: "-100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "-100%" }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed top-0 left-0 h-screen w-full bg-[#07090f] z-50 md:hidden flex flex-col"
                     >
-                        Close
-                    </button>
-                </motion.div>
-            )}
+                        <div className="flex flex-col items-center justify-center flex-grow space-y-4">
+                            {navLinks.map((navLink) => (
+                                <NavItem
+                                    key={navLink.label}
+                                    label={navLink.label}
+                                    path={navLink.path}
+                                />
+                            ))}
+                        </div>
+                        <button
+                            onClick={() => setIsMenuOpen(false)}
+                            className="text-white uppercase text-sm font-medium mb-10"
+                        >
+                            Close
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 };

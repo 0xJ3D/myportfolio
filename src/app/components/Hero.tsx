@@ -16,9 +16,9 @@ const Hero = () => {
                 scale: { type: "spring", bounce: 0.4 },
                 delayChildren: 0.3,
             }}
-            className="flex flex-col w-full justify-center items-center px-2 md:px-5 rounded-b-lg  overflow-x-hidden"
+            className="flex flex-col w-full justify-center items-center pl-1 md:px-5 md:rounded-b-lg "
         >
-            <div className="borderx rounded-b-lg p-5 px-10 bg-[#07090f] w-full  ">
+            <div className="md:rounded-b-lg p-5 px-10 bg-[#07090f] w-full  ">
                 {/* Content Container */}
                 <div className=" flex flex-col-reverse lg:flex-row justify-between items-center w-full gap-12 mb-16">
                     {/* Text Content */}

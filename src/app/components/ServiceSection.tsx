@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import HireMeButton from "./HireMeButton";
 import { WhatIDoDetails } from "../utils/siteData";
 import { ServiceCard } from "./serviceCard";
+import PlayButton from "./PlayButton";
 
 // Animation variants
 const containerVariants = {
@@ -118,8 +118,9 @@ export default function ServicesSection() {
                             </motion.p>
                         </motion.div>
                     </div>
-
-                    <HireMeButton />
+                    <div className="hidden md:block">
+                        <PlayButton />
+                    </div>
                 </div>
 
                 {/* Services Cards */}

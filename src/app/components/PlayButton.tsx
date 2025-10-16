@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
-export default function HireMeButton() {
+export default function PlayButton() {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -42,7 +42,7 @@ export default function HireMeButton() {
                     duration: 0.3,
                 }}
             >
-                Hire Me!
+                ????
             </motion.span>
 
             {/* Enhanced arrow animation */}
