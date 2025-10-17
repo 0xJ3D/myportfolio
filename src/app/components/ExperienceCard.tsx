@@ -1,6 +1,17 @@
 import React from "react";
 
-const ExperienceCard = ({ experience }) => {
+type Experience = {
+    company: string;
+    role: string;
+    period: string;
+    achievements: string[];
+};
+
+type ExperienceCardProps = {
+    experience: Experience;
+};
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
     return (
         <div className="sticky bg-black p-4 md:p-6 rounded-lg shadow-md mb-6 md:mb-8 w-full">
             <h3 className="text-xl md:text-2xl font-bold text-[#ff8360]">
