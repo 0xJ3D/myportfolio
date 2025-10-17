@@ -1,7 +1,11 @@
 "use client";
 
-import LottieAnimation from "./components/LottieAnimation";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const LottieAnimation = dynamic(() => import("./components/LottieAnimation"), {
+    ssr: false,
+});
 import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
